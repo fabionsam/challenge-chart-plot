@@ -1,0 +1,141 @@
+@import 'codemirror/lib/codemirror.css';
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #2e3440;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #60656e;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.CodeMirror {
+    overflow: hidden;
+    resize: vertical;
+    min-height: 200px;
+}
+
+.cm-s-challenge {
+    background-color: #2e3440 !important;
+    color: #eeffff !important;
+    line-height: 20px;
+    font-size: 13px;
+}
+
+.cm-s-challenge .CodeMirror-vscrollbar {
+    margin-right: 5px;
+}
+
+.cm-s-challenge .CodeMirror-hscrollbar {
+    margin-bottom: 5px;
+}
+
+.cm-s-challenge .CodeMirror-gutters {
+    background: #60656e;
+    border: none;
+}
+
+.cm-s-challenge .CodeMirror-linenumber {
+    color: #3e434e;
+}
+
+.cm-s-challenge .CodeMirror-cursor {
+    border-left: 1px solid #eeffff !important;
+}
+
+.cm-s-challenge .cm-keyword {
+    color: #c792ea;
+}
+
+.cm-s-challenge .cm-operator {
+    color: #89ddff;
+}
+
+.cm-s-challenge .cm-variable-2 {
+    color: #eeffff;
+}
+
+.cm-s-challenge .cm-variable-3,
+.cm-s-challenge .cm-type {
+    color: #f07178;
+}
+
+.cm-s-challenge .cm-builtin {
+    color: #ffcb6b;
+}
+
+.cm-s-challenge .cm-atom {
+    color: #f78c6c;
+}
+
+.cm-s-challenge .cm-number {
+    color: #a376cd;
+}
+
+.cm-s-challenge .cm-def {
+    color: #82aaff;
+}
+
+.cm-s-challenge .cm-string {
+    color: #0dcbdc;
+}
+
+.cm-s-challenge .cm-string-2 {
+    color: #f07178;
+}
+
+.cm-s-challenge .cm-comment {
+    color: #546e7a;
+}
+
+.cm-s-challenge .cm-variable {
+    color: #fefefe;
+}
+
+.cm-s-challenge .cm-tag {
+    color: #ff5370;
+}
+
+.cm-s-challenge .cm-meta {
+    color: #ffcb6b;
+}
+
+.cm-s-challenge .cm-attribute {
+    color: #c792ea;
+}
+
+.cm-s-challenge .cm-property {
+    color: #c792ea;
+}
+
+.cm-s-challenge .cm-qualifier {
+    color: #decb6b;
+}
+
+.cm-s-challenge .cm-variable-3,
+.cm-s-challenge .cm-type {
+    color: #decb6b;
+}
+
+.cm-s-challenge .cm-error {
+    color: rgba(255, 255, 255, 1);
+    background-color: #ff5370;
+}
+
+.cm-s-challenge .CodeMirror-matchingbracket {
+    text-decoration: underline;
+    color: white !important;
+}
