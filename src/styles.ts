@@ -1,5 +1,11 @@
 import styled from 'styled-components'
 
+const MainContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+`
+
 const Header = styled.div`
     display: flex;
     background-color: #dddee1;
@@ -13,12 +19,10 @@ const Header = styled.div`
 `
 
 const Footer = styled.div`
-    position: fixed;
     left: 0;
     bottom: 0;
     background-color: #dddee1;
     height: 60px;
-    width: 100%;
     padding-left: 30px;
 `
 
@@ -42,4 +46,4 @@ const Button = styled.button`
     }
 `
 
-export { Header, Footer, Button }
+export { MainContainer, Header, Footer, Button }
