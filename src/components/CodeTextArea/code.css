@@ -28,7 +28,6 @@
     height: 200px;
     min-height: 200px;
     max-height: 300px;
-    margin-left: 5px;
 }
 
 .cm-s-challenge {
@@ -45,6 +44,10 @@
 
 .cm-s-challenge .CodeMirror-hscrollbar {
     margin-bottom: 5px;
+}
+
+.cm-s-challenge .CodeMirror-line {
+    padding: 0 10px !important;
 }
 
 .cm-s-challenge .CodeMirror-gutters {
