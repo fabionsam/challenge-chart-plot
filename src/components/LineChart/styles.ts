@@ -1,1 +1,9 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
+
+const Container = styled.div`
+    display: flex;
+    height: 1px; //fix autogrow
+    flex-grow: 1;
+`
+
+export { Container }
