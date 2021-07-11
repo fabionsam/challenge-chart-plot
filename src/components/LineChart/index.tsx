@@ -2,38 +2,15 @@ import React from 'react'
 import { ResponsiveLine } from '@nivo/line'
 import { Container } from './styles'
 
-const LineChart: React.FC = () => {
+declare interface LineChartProps {
+    data: Array<{ id: any; data: Array<{ x: any; y: any }> }>
+}
+
+const LineChart: React.FC<LineChartProps> = ({ data }: LineChartProps) => {
     return (
         <Container>
             <ResponsiveLine
-                data={[
-                    {
-                        id: 'mac/firefox-max',
-                        data: [
-                            {
-                                x: '0',
-                                y: 1,
-                            },
-                            {
-                                x: '1',
-                                y: 1.2,
-                            },
-                        ],
-                    },
-                    {
-                        id: 'mac/firefox-min',
-                        data: [
-                            {
-                                x: '0',
-                                y: 0.1,
-                            },
-                            {
-                                x: '1',
-                                y: 0.2,
-                            },
-                        ],
-                    },
-                ]}
+                data={data}
                 margin={{ top: 50, right: 220, bottom: 50, left: 60 }}
                 xScale={{ type: 'point' }}
                 yScale={{
