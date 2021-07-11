@@ -39,7 +39,8 @@ module.exports = {
         "tsx": "never"
       }
     ],
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "class-methods-use-this": "off",
   },
   settings: {
     "import/extensions": [".js", ".jsx", ".ts", ".tsx"],

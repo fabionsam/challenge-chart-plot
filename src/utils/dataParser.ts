@@ -1,32 +1,33 @@
-import moment from 'moment';
+import moment from 'moment'
 
 class DataParser {
-    private _rawData: string;
-    constructor(rawData: string){
-        this._rawData = rawData;
+    private rawData: string
+
+    constructor(rawData: string) {
+        this.rawData = rawData
     }
 
     private readStart() {
-
+        throw new Error('Not Implemented')
     }
 
     private readSpan() {
-
+        throw new Error('Not Implemented')
     }
 
     private readStop() {
-
+        throw new Error('Not Implemented')
     }
 
     private readData() {
-
+        throw new Error('Not Implemented')
     }
 
     public generateChartData() {
-        this._rawData.split('\n').map(line => {
-            console.log();
-        });
+        this.rawData.split('\n').map((line) => {
+            return {}
+        })
     }
 }
 
-export default DataParser;
+export default DataParser
