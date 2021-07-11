@@ -27,14 +27,16 @@
     resize: vertical;
     height: 200px;
     min-height: 200px;
-    font-family: Source Sans Pro;
+    max-height: 300px;
+    margin-left: 5px;
 }
 
 .cm-s-challenge {
+    font-family: Source Sans Pro;
     background-color: #2e3440 !important;
     color: #eeffff !important;
     line-height: 20px;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .cm-s-challenge .CodeMirror-vscrollbar {
