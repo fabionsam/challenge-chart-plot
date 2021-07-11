@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import CodeTextArea from './components/CodeTextArea'
 import LineChart from './components/LineChart'
 import { MainContainer, Button, Footer, Header } from './styles'
+import DataParser from './utils/dataParser'
 
 const App: React.FC = () => {
     const [text, setText] = useState('')
@@ -14,7 +15,10 @@ const App: React.FC = () => {
         setText(value)
     }
 
-    const handleButtonClick = () => {}
+    const handleButtonClick = () => {
+        const dataParser = new DataParser(text)
+        dataParser.generateChartData()
+    }
 
     return (
         <MainContainer>
