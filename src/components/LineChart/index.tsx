@@ -3,7 +3,7 @@ import { ResponsiveLine } from '@nivo/line'
 import { Container } from './styles'
 
 declare interface LineChartProps {
-    data: Array<{ id: any; data: Array<{ x: any; y: any }> }>
+    data: Array<ChartData>
 }
 
 const LineChart: React.FC<LineChartProps> = ({ data }: LineChartProps) => {
