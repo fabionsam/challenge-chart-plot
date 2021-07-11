@@ -25,7 +25,9 @@
 .CodeMirror {
     overflow: hidden;
     resize: vertical;
+    height: 200px;
     min-height: 200px;
+    font-family: Source Sans Pro;
 }
 
 .cm-s-challenge {
