@@ -3,8 +3,14 @@ import React, { useState } from 'react'
 import { UnControlled as CodeMirror } from 'react-codemirror2'
 require('codemirror/mode/javascript/javascript')
 
-const CodeTextArea: React.FC = () => {
-    const [text, setText] =
+declare interface CodeTextAreaProps {
+    onChange: (editor: any, data: any, value: string) => void
+}
+
+const CodeTextArea: React.FC<CodeTextAreaProps> = ({
+    onChange,
+}: CodeTextAreaProps) => {
+    const [initialText] =
         useState(`{type: 'start', timestamp: 1519862400000, select: ['min_response_time', 'max_response_time'], group: ['os', 'browser']}
 {type: 'span', timestamp: 1519862400000, begin: 1519862400000, end: 1519862460000}
 {type: 'data', timestamp: 1519862400000, os: 'linux', browser: 'chrome', min_response_time: 0.1, max_response_time: 1.3}
@@ -19,15 +25,13 @@ const CodeTextArea: React.FC = () => {
 
     return (
         <CodeMirror
-            value={text}
+            value={initialText}
             options={{
                 mode: 'javascript',
                 theme: 'challenge',
                 lineNumbers: true,
             }}
-            onChange={(editor, data, value) => {
-                setText(value)
-            }}
+            onChange={onChange}
         />
     )
 }
