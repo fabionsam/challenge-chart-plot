@@ -35,6 +35,10 @@ const LineChart: React.FC<LineChartProps> = ({ data }: LineChartProps) => {
                 pointBorderColor={{ from: 'serieColor' }}
                 pointLabelYOffset={-12}
                 useMesh={true}
+                theme={{
+                    fontSize: 13,
+                    fontFamily: 'Source Sans Pro',
+                }}
                 legends={[
                     {
                         anchor: 'top-right',
