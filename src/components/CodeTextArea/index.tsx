@@ -1,5 +1,5 @@
 import './code.css'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { UnControlled as CodeMirror } from 'react-codemirror2'
 require('codemirror/mode/javascript/javascript')
 
@@ -22,6 +22,10 @@ const CodeTextArea: React.FC<CodeTextAreaProps> = ({
 {type: 'data', timestamp: 1519862460000, os: 'mac', browser: 'firefox', min_response_time: 0.2, max_response_time: 1.1}
 {type: 'data', timestamp: 1519862460000, os: 'linux', browser: 'firefox', min_response_time: 0.3, max_response_time: 1.4}
 {type: 'stop', timestamp: 1519862400000}`)
+
+    useEffect(() => {
+        onChange(null, null, initialText)
+    }, [])
 
     return (
         <CodeMirror
