@@ -37,12 +37,12 @@ class DataParser {
     private readStop(obj: StopSet) {
         this.stop = obj
         this.generateChartData()
+        this.span = undefined
         this.start = undefined
     }
 
     private readData(obj: DataSet) {
-        if (this.stop || !this.start) return
-        if (!this.span) throw new Error('Span undefined')
+        if (this.stop || !this.start || !this.span) return
         if (obj.timestamp < this.span.begin || obj.timestamp > this.span.end)
             return
         this.data.push(obj)
@@ -98,7 +98,9 @@ class DataParser {
                             .unix(data.timestamp / 1000)
                             .subtract(this.span!.begin)
                             .format('mm:SS'),
-                        y: data[field],
+                        y: Object.keys(data).find((x) => x === field)
+                            ? data[field]
+                            : 0,
                     })
                 } else {
                     this.chartData.push({
@@ -109,7 +111,9 @@ class DataParser {
                                     .unix(data.timestamp / 1000)
                                     .subtract(this.span!.begin)
                                     .format('mm:SS'),
-                                y: data[field],
+                                y: Object.keys(data).find((x) => x === field)
+                                    ? data[field]
+                                    : 0,
                             },
                         ],
                     })
