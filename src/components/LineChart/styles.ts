@@ -4,6 +4,10 @@ const Container = styled.div`
     display: flex;
     height: 1px; //fix autogrow
     flex-grow: 1;
+    font-family: Source Sans Pro;
+    & span {
+        font-size: 12px;
+    }
 `
 
 export { Container }

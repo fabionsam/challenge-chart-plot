@@ -11,17 +11,13 @@ const LineChart: React.FC<LineChartProps> = ({ data }: LineChartProps) => {
         <Container>
             <ResponsiveLine
                 data={data}
-                margin={{ top: 50, right: 220, bottom: 50, left: 60 }}
+                margin={{ top: 50, right: 220, bottom: 50, left: 100 }}
                 xScale={{ type: 'point' }}
                 yScale={{
                     type: 'linear',
-                    min: 'auto',
-                    max: 'auto',
-                    stacked: true,
                     reverse: false,
                 }}
                 enableGridX={false}
-                yFormat=" >-.2f"
                 axisTop={null}
                 axisRight={null}
                 axisBottom={{
@@ -31,12 +27,14 @@ const LineChart: React.FC<LineChartProps> = ({ data }: LineChartProps) => {
                     legendOffset: 36,
                     legendPosition: 'middle',
                 }}
+                colors={{ scheme: 'category10' }}
                 axisLeft={null}
                 pointSize={10}
                 pointColor={{ from: 'color' }}
                 pointBorderWidth={2}
                 pointBorderColor={{ from: 'serieColor' }}
                 pointLabelYOffset={-12}
+                useMesh={true}
                 legends={[
                     {
                         anchor: 'top-right',
