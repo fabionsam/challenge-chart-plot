@@ -58,8 +58,8 @@ class DataParser {
             .reduce((accumulator, currentValue) => {
                 const [key, value] = currentValue
                 accumulator[key] = value.match(/^\[|\]$/g)
-                    ? JSON.parse(value.replaceAll("'", '"'))
-                    : value.replaceAll("'", '')
+                    ? JSON.parse(value.replace(/'/g, '"'))
+                    : value.replace(/'/g, '')
                 return accumulator
             }, {})
     }
