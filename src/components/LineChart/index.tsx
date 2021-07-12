@@ -11,7 +11,7 @@ const LineChart: React.FC<LineChartProps> = ({ data }: LineChartProps) => {
         <Container id="chartContainer">
             <ResponsiveLine
                 data={data}
-                margin={{ top: 50, right: 220, bottom: 50, left: 60 }}
+                margin={{ top: 50, right: 250, bottom: 50, left: 40 }}
                 xScale={{ type: 'point' }}
                 yScale={{
                     type: 'linear',
@@ -36,7 +36,7 @@ const LineChart: React.FC<LineChartProps> = ({ data }: LineChartProps) => {
                 pointLabelYOffset={-12}
                 useMesh={true}
                 theme={{
-                    fontSize: 13,
+                    fontSize: 14,
                     fontFamily: 'Source Sans Pro',
                 }}
                 legends={[
