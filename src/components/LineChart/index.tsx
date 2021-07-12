@@ -11,7 +11,7 @@ const LineChart: React.FC<LineChartProps> = ({ data }: LineChartProps) => {
         <Container id="chartContainer">
             <ResponsiveLine
                 data={data}
-                margin={{ top: 50, right: 220, bottom: 50, left: 100 }}
+                margin={{ top: 50, right: 220, bottom: 50, left: 80 }}
                 xScale={{ type: 'point' }}
                 yScale={{
                     type: 'linear',

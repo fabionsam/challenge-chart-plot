@@ -9,7 +9,7 @@ const Container = styled.div`
         font-size: 13px;
     }
     & text {
-        font-size: 13px;
+        font-size: 13px !important;
     }
 `
 
