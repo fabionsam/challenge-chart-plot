@@ -100,7 +100,7 @@ class DataParser {
                         x: moment
                             .unix(data.timestamp / 1000)
                             .subtract(this.span!.begin)
-                            .format('mm:SS'),
+                            .format('mm:ss'),
                         y: Object.keys(data).find((x) => x === field)
                             ? data[field]
                             : 0,
@@ -113,7 +113,7 @@ class DataParser {
                                 x: moment
                                     .unix(data.timestamp / 1000)
                                     .subtract(this.span!.begin)
-                                    .format('mm:SS'),
+                                    .format('mm:ss'),
                                 y: Object.keys(data).find((x) => x === field)
                                     ? data[field]
                                     : 0,

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useCallback, useState } from 'react'
 import CodeTextArea from './components/CodeTextArea'
 import LineChart from './components/LineChart'
 import { MainContainer, Button, Footer, Header } from './styles'
@@ -27,10 +27,10 @@ const App: React.FC = () => {
         setText(value)
     }
 
-    const handleButtonClick = () => {
+    const handleButtonClick = useCallback(() => {
         const dataParser = new DataParser(text)
         setChartData(dataParser.readTextData())
-    }
+    }, [text])
 
     return (
         <MainContainer>
