@@ -120,8 +120,6 @@ class DataParser {
                 }
             })
         })
-
-        console.log(this.chartData)
     }
 
     public readTextData(): Array<ChartData> {
