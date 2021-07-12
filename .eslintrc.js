@@ -29,6 +29,7 @@ module.exports = {
     "import/prefer-default-export": "off",
     "import/newline-after-import": "off",
     "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
     "no-use-before-define": "off",
     "import/extensions": [
