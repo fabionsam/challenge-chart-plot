@@ -27,7 +27,7 @@ const LineChart: React.FC<LineChartProps> = ({ data }: LineChartProps) => {
                     legendOffset: 36,
                     legendPosition: 'middle',
                 }}
-                colors={{ scheme: 'category10' }}
+                colors={{ scheme: 'paired' }}
                 axisLeft={null}
                 pointSize={10}
                 pointColor={{ from: 'color' }}
