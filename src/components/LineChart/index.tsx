@@ -8,7 +8,7 @@ declare interface LineChartProps {
 
 const LineChart: React.FC<LineChartProps> = ({ data }: LineChartProps) => {
     return (
-        <Container>
+        <Container id="chartContainer">
             <ResponsiveLine
                 data={data}
                 margin={{ top: 50, right: 220, bottom: 50, left: 100 }}
