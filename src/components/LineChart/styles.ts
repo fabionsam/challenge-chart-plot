@@ -6,7 +6,10 @@ const Container = styled.div`
     flex-grow: 1;
     font-family: Source Sans Pro;
     & span {
-        font-size: 12px;
+        font-size: 13px;
+    }
+    & text {
+        font-size: 13px;
     }
 `
 

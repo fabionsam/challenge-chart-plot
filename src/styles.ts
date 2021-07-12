@@ -37,7 +37,7 @@ const Button = styled.button`
     outline: none;
     color: white;
     font-family: 'Source Sans Pro';
-    font-size: 10px;
+    font-size: 12px;
     cursor: pointer;
     top: 15px;
 
