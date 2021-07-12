@@ -25,6 +25,7 @@ module.exports = {
     'prettier'
   ],
   rules: {
+    "react/jsx-boolean-value": "off",
     "import/prefer-default-export": "off",
     "import/newline-after-import": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
