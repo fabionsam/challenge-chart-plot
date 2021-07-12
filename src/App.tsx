@@ -6,6 +6,7 @@ import DataParser from './utils/dataParser'
 
 const App: React.FC = () => {
     const [text, setText] = useState('')
+    const [chartData, setChartData] = useState<Array<ChartData>>([])
 
     const handleCodeTextAreaOnChange = (
         editor: any,
@@ -17,14 +18,14 @@ const App: React.FC = () => {
 
     const handleButtonClick = () => {
         const dataParser = new DataParser(text)
-        dataParser.generateChartData()
+        setChartData(dataParser.readTextData())
     }
 
     return (
         <MainContainer>
             <Header>Fábio&apos;s Challenge</Header>
             <CodeTextArea onChange={handleCodeTextAreaOnChange} />
-            <LineChart data={[]} />
+            <LineChart data={chartData} />
             <Footer>
                 <Button onClick={handleButtonClick}>Generate Chart</Button>
             </Footer>
