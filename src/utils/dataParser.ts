@@ -80,9 +80,12 @@ class DataParser {
     }
 
     private getId(data: DataSet, field: string): string {
-        return `${field} - ${this.start!.group.map((group) => {
+        return `${this.start!.group.map((group) => {
             return data[group]
-        }).join('/')}`
+        }).join(' ')} ${field.replace(/_/g, ' ')}`.replace(
+            /(^\w{1})|(\s+\w{1})/g,
+            (match) => match.toUpperCase()
+        )
     }
 
     private generateChartData() {
