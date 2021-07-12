@@ -1,89 +1,38 @@
-# Plotting a chart
+Styled Components: I chose to use for styles because it's very simple and it's almost pure CSS.
 
-In this challenge, you will implement a web application that plots a line chart based on some manually input data.
+ReactJS + TypeScript: ReactJS is the library for webpages that I have more experience and Typscript is very similar to others object oriented languages(like C#, Java, Kotlin) so it's more simple to me to make the code more organized, legible and maintanable.
 
-The input data is a sequence of events. This sequence represents the output of a query, which is omitted for simplicity. The data will be manually input by the final user instead. Based on the input sequence of events, you may generate a time based line chart containing one or more series.
+CodeMirror(react-codemirror2): I have never used this library before, but a friend indicated it and I thought that should be a good time to try it. The functionality worked great and the styling was easy, it realy made the development more easy.
 
-## Definitions
-An event is a set of keys and values. For this challenge, it will be represented as a JSON. 
+Nivo/Line: I had to use it on past projects so I choose to use it here too, it's very simple to pass data to it and have many options for style. The speed for rendering is good too.
 
-```
-{a: 1, b: 2}
-```
+Moment: Great lib to work with Date types.
 
-> Although this is not a strict JSON format, we are being lenient in order to improve readability and facilitate the data input. As there are some backend libraries that support this format, you can implement that support as a bonus.
+I created a class called DataParser that is responsible for read the text and parse it to the chart, I made it simple here but if I could choose I would not write it on frontend, I'm almost sure that it should have more ways to work with huge data.
 
-On our system, each event has two mandatory fields: timestamp and type. All other fields are optional.
+I wrote a few commits in portuguese because of habit, but I started commiting in english as soon as I noticed it. Sorry :/
 
-* *timestamp* field holds the moment that the event refers to. It is formatted as a regular [Javascript timestamp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime)
+[Link Here](https://gallant-bhabha-0d47f2.netlify.app)
 
-* *type* field holds the definition of what is represented on each event. Its value can be one of the following:
+Translated commits:
 
-### start
-Events of type *start* define that a new sequence of data events will follow, along with the fields that may be plotted and their grouping. A group is a category for splitting the same variable into different series.
+Criando projeto React, adicionando dependecias e configurando ESLint/Prettier - 82b8734457ef5459549f21cc1722fb8b0b6ccb8b
+Creating React project. Adding dependencies and setting up ESLint/Prettier
 
-Example:
-```
-{type: 'start', timestamp: 1519780251293, select: ['min_response_time', 'max_response_time'], group: ['os', 'browser']}
-```
-In this example, for each different value of the pair (os, browser), we may plot two lines: one that represents the minimum response time, and one that represents the maximum response time. That is: if there are two different values for os and two different values for browser, we should have 8 different lines plotted.
+Configurando corretamente eslint e prettier - 7acbc5bad99821fca3c176d057db5489449ce697
+Setting up correctly eslint and prettier
 
-### span
-Events of type *span* define what is the visible date range for the chart. A new event of this type may make the chart update its boundaries.
+Adicionando link/font ao index.html - 23d036cd7a1181dccde6f0b1ec0f1daa67fb2eeb
+Adding link/font to index.html
 
-Example:
-```
-{type: 'span', timestamp: 1519780251293, begin: 1519780251293, end: 1519780260201}
-```
-In this example the data should be plotted inside the interval between the begin and end values, that is, the timestamps 1519780251293 and 1519780260201, respectively. All data outside this range may be ignored.
+Removendo webvitals - d1365e8a74c4ec69841d51b405937ec465853192
+Removing webvitals
 
-### stop
-Events of type *stop* define that no more data events will follow.
-A *stop* event is generated after loading a static timespan in the past, or if the user explicitly stops the query. If the chart consumes real time data, it might never be generated.
-Any events that eventually follow a *stop* event should be ignored, except for a new *start*, which would imply the creation of a new chart.
+Implementando CodeTextArea - 0640eebb006db8be8e178f1a08bc6fe691cc4cee
+Implementing CodeTextArea
 
-Example:
-```
-{type: 'stop', timestamp: 1519780251293}
-```
+Adicionando header e CodeTextArea à pagina - d3b074ab27a99549e8baeb2a6763bf6e171819a3
+Adding header and CodeTextArea to the page
 
-### data
-Events of type *data* define the content that might be displayed on the chart.
-
-Example
-```
-{type: 'data', timestamp: 1519780251000, os: 'linux', browser: 'chrome', min_response_time: 0.1, max_response_time: 1.3}
-```
-
-> Note that absent data values for the fields defined by *select* and *group* also generate new series. On the other hand, fields that are not defined should be ignored.
-
-## The challenge
-
-We expect you to:
-
-* Provide an input on the user interface to allow plotting different sequences of events;
-* Based on an arbitrary sequence of events, plot the chart that represents the output for that sequence;
-* Follow the layout indication provided on the prototype below;
-* Write tests;
-* Suggest and implement a protection for this application to deal with huge amount of data;
-* Justify design choices, arguing about costs and benefits involved. You may write those as comments inline or, if you wish, provide a separate document summarizing those choices;
-* Write all code and documentation in english
-
-![challenge_frontend](https://github.com/intelie/challenge-chart-plot/raw/master/challenge_frontend.png "Expected user interface")
-
-Although you can choose any graphical library to plot the chart, we suggest that you use a declarative JS framework to build the application such as ReactJS.
-
-## Solve this challenge
-
-To solve this challenge, you may fork this repository, then
-send us a link with your implementation. Alternatively, if you do not want to have this repo on
-your profile (we totally get it), send us a
-[git patch file](https://www.devroom.io/2009/10/26/how-to-create-and-apply-a-patch-with-git/)
-with your changes.
-
-There is no unique solution to this challenge. The intent is to evaluate candidate's ability and familiarity with tools and best practices.
-
-If you are already in the hiring process, you may send it to whoever is your contact at Intelie. If you wish to apply for a job at Intelie, please send your solution to [trabalhe@intelie.com.br](mailto:trabalhe@intelie.com.br).
-
-
-
+Iniciando implementação do LineChart - 9533fd99ce4ca12b11b697332523b59d1844e55a
+Starting the implementation of LineChart
