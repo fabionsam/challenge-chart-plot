@@ -16,23 +16,23 @@ I wrote a few commits in portuguese because of habit, but I started commiting in
 
 Translated commits:
 
-Criando projeto React, adicionando dependecias e configurando ESLint/Prettier - 82b8734457ef5459549f21cc1722fb8b0b6ccb8b
+Criando projeto React, adicionando dependecias e configurando ESLint/Prettier - 82b8734457ef5459549f21cc1722fb8b0b6ccb8b  
 Creating React project. Adding dependencies and setting up ESLint/Prettier
 
-Configurando corretamente eslint e prettier - 7acbc5bad99821fca3c176d057db5489449ce697
+Configurando corretamente eslint e prettier - 7acbc5bad99821fca3c176d057db5489449ce697  
 Setting up correctly eslint and prettier
 
-Adicionando link/font ao index.html - 23d036cd7a1181dccde6f0b1ec0f1daa67fb2eeb
+Adicionando link/font ao index.html - 23d036cd7a1181dccde6f0b1ec0f1daa67fb2eeb  
 Adding link/font to index.html
 
-Removendo webvitals - d1365e8a74c4ec69841d51b405937ec465853192
+Removendo webvitals - d1365e8a74c4ec69841d51b405937ec465853192  
 Removing webvitals
 
-Implementando CodeTextArea - 0640eebb006db8be8e178f1a08bc6fe691cc4cee
+Implementando CodeTextArea - 0640eebb006db8be8e178f1a08bc6fe691cc4cee  
 Implementing CodeTextArea
 
-Adicionando header e CodeTextArea à pagina - d3b074ab27a99549e8baeb2a6763bf6e171819a3
+Adicionando header e CodeTextArea à pagina - d3b074ab27a99549e8baeb2a6763bf6e171819a3  
 Adding header and CodeTextArea to the page
 
-Iniciando implementação do LineChart - 9533fd99ce4ca12b11b697332523b59d1844e55a
+Iniciando implementação do LineChart - 9533fd99ce4ca12b11b697332523b59d1844e55a  
 Starting the implementation of LineChart
