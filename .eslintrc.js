@@ -28,7 +28,8 @@ module.exports = {
     "react/jsx-boolean-value": "off",
     "import/prefer-default-export": "off",
     "import/newline-after-import": "off",
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "@typescript-eslint/no-explicit-any": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
     "no-use-before-define": "off",
     "import/extensions": [
       "error",
