@@ -44,10 +44,10 @@ const LineChart: React.FC<LineChartProps> = ({ data }: LineChartProps) => {
                         translateY: 0,
                         itemsSpacing: 0,
                         itemDirection: 'left-to-right',
-                        itemWidth: 220,
+                        itemWidth: 200,
                         itemHeight: 20,
                         itemOpacity: 0.75,
-                        symbolSize: 12,
+                        symbolSize: 13,
                         symbolShape: 'circle',
                         symbolBorderColor: 'rgba(0, 0, 0, .5)',
                         effects: [

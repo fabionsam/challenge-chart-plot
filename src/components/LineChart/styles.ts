@@ -8,9 +8,6 @@ const Container = styled.div`
     & span {
         font-size: 13px;
     }
-    & text {
-        font-size: 13px !important;
-    }
 `
 
 export { Container }
