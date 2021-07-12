@@ -1,6 +1,6 @@
 Styled Components: I chose to use for styles because it's very simple and it's almost pure CSS.
 
-ReactJS + TypeScript: ReactJS is the library for webpages that I have more experience and Typscript is very similar to others object oriented languages(like C#, Java, Kotlin) so it's more simple to me to make the code more organized, legible and maintanable.
+ReactJS + TypeScript: ReactJS is the library for webpages that I have more experience and Typscript(that I also have experience and use at my projects even at backend) is very similar to others object oriented languages(like C#, Java, Kotlin) so it's more simple to me to make the code more organized, legible and maintanable.
 
 CodeMirror(react-codemirror2): I have never used this library before, but a friend indicated it and I thought that should be a good time to try it. The functionality worked great and the styling was easy, it realy made the development more easy.
 
@@ -10,7 +10,9 @@ Moment: Great lib to work with Date types.
 
 I created a class called DataParser that is responsible for read the text and parse it to the chart, I made it simple here but if I could choose I would not write it on frontend, I'm almost sure that it should have more ways to work with huge data.
 
-I wrote a few commits in portuguese because of habit, but I started commiting in english as soon as I noticed it. Sorry :/
+I wrote a few commits in portuguese because of habit, but I started commiting in english as soon as I noticed it. Sorry :/  
+
+I really appreciate the opportunity and I'm open for tips and ideas.
 
 [Link Here](https://gallant-bhabha-0d47f2.netlify.app)
 
